@@ -24,3 +24,8 @@ build/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+
+# Large model files
+models/*.pkl
+models/**/*.safetensors
