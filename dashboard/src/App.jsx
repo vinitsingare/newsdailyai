@@ -5,6 +5,7 @@ import ArticleCard from './components/ArticleCard';
 import DiscordLanding from './pages/DiscordLanding';
 import WhatsAppLanding from './pages/WhatsAppLanding';
 import VerifyPage from './pages/VerifyPage';
+import DeepfakePage from './pages/DeepfakePage';
 import './index.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://vinitsingare-ai-news-api.hf.space';
 
   const fetchStats = async () => {
     try {
@@ -222,6 +223,7 @@ function App() {
           <Route path="/discord" element={<DiscordLanding />} />
           <Route path="/whatsapp" element={<WhatsAppLanding />} />
           <Route path="/verify" element={<VerifyPage />} />
+          <Route path="/deepfake" element={<DeepfakePage />} />
         </Routes>
       </main>
     </div>
