@@ -6,7 +6,7 @@ const WhatsAppLanding = () => {
   const [isAvailable, setIsAvailable] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://vinitsingare-ai-news-api.hf.space';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
   useEffect(() => {
     const fetchWhatsAppInfo = async () => {

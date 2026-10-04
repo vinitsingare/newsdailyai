@@ -1,38 +1,16 @@
----
-title: AI News API
-emoji: 📰
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-pinned: false
----
+# React + Vite
 
-# AI-Based News Monitoring and Automated Daily Briefing System
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-An end-to-end 5-layer pipeline that ingests, cleans, classifies, and summarizes news articles, served on a web dashboard.
+Currently, two official plugins are available:
 
-## Overview
-1. **Data Ingestion Layer**: Fetches articles from NewsAPI and RSS.
-2. **NLP Preprocessing Layer**: Cleans text using NLTK and spaCy.
-3. **Core Intelligence Layer**: Multi-class categorization, fake news detection, and topic modeling (LDA).
-4. **Briefing Generation Layer**: Extractive and abstractive (BART) summarization.
-5. **Presentation Layer**: Streamlit web dashboard.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Setup Instructions
+## React Compiler
 
-1. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-2. **Environment Variables**
-   Rename or update `.env` to include your valid API keys:
-   ```
-   NEWSAPI_KEY=your_newsapi_key_here
-   ```
+## Expanding the ESLint configuration
 
-3. **Run Data Ingestion Scheduler**
-   ```bash
-   python -m src.ingestion.scheduler
-   ```
-   This will initialize the SQLite database at `data/database.sqlite` and begin fetching articles.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
